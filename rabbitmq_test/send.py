@@ -1,6 +1,6 @@
 # coding=utf-8
 import pika
-credentials = pika.PlainCredentials('xuw', '')
+credentials = pika.PlainCredentials('xuw', 'xuw@123')
 connection = pika.BlockingConnection(pika.ConnectionParameters(  
         host='115.159.149.177',credentials=credentials))
 channel = connection.channel()  

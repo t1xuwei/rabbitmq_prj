@@ -1,5 +1,8 @@
 import pika  
-  
+'''
+接收rabbitmq发送的信息
+'''
+
 connection = pika.BlockingConnection(pika.ConnectionParameters(  
         host='localhost'))  
 channel = connection.channel()  

@@ -1,7 +1,8 @@
-import pika  
-  
+# coding=utf-8
+import pika
+credentials = pika.PlainCredentials('xuw', '')
 connection = pika.BlockingConnection(pika.ConnectionParameters(  
-        host='localhost'))  
+        host='115.159.149.177',credentials=credentials))
 channel = connection.channel()  
   
 channel.queue_declare(queue='hello')  

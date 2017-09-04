@@ -1,10 +1,11 @@
-import pika  
+# coding=utf-8
+import pika
 '''
 接收rabbitmq发送的信息
 '''
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(  
-        host='localhost'))  
+        host='115.159.149.177'))
 channel = connection.channel()  
   
 #channel.queue_declare(queue='route_k')  

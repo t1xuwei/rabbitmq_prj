@@ -5,7 +5,7 @@ import pika
 '''
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(  
-        host='115.159.149.177'))
+        host='localhost'))
 channel = connection.channel()  
   
 #channel.queue_declare(queue='route_k')  

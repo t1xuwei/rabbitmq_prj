@@ -6,7 +6,7 @@ connection = pika.BlockingConnection(pika.ConnectionParameters(
     host='115.159.149.177', credentials=credentials))
 channel = connection.channel()
 
-queue = channel.queue_declare(queue='hello', arguments={'x-max-length': 10})
+queue = channel.queue_declare(queue='hello')#arguments={'x-max-length': 10}
 
 for index in range(0, 100):
     channel.basic_publish(exchange='',

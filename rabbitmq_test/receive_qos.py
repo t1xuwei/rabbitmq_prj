@@ -22,6 +22,6 @@ channel.basic_qos(prefetch_count=1)
 # no_ack为false时，每次启动接收脚本都会收到队列里面的信息
 channel.basic_consume(callback,
                       queue='hello',
-                      no_ack=True)
+                      no_ack=False)
 
 channel.start_consuming()  
